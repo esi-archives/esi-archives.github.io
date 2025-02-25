@@ -1,0 +1,374 @@
+.lightmode .course[semester="S1"] {
+    --hover-color: rgb(81, 162, 255, 0.4);
+}
+
+.lightmode .course[semester="S1"][open="true"] .course-name,
+.lightmode .course[semester="S1"][open="true"] .course-year-and-semester {
+    color: rgb(81, 162, 255);
+    transition: color 250ms ease-in;
+}
+
+.lightmode .course[semester="S2"] {
+    --hover-color: rgb(28, 57, 142, 0.4);
+}
+
+.lightmode .course[semester="S2"][open="true"] .course-name,
+.lightmode .course[semester="S2"][open="true"] .course-year-and-semester {
+    color: rgb(28, 57, 142);
+    transition: color 250ms ease-in;
+}
+
+.lightmode .course[semester="S3"] {
+    --hover-color: rgb(0, 95, 90, 0.4);
+}
+
+.lightmode .course[semester="S3"][open="true"] .course-name,
+.lightmode .course[semester="S3"][open="true"] .course-year-and-semester {
+    color: rgb(0, 95, 90);
+    transition: color 250ms ease-in;
+}
+
+.lightmode .course[semester="S4"] {
+    --hover-color: rgb(2, 47, 46, 0.4);
+}
+
+.lightmode .course[semester="S4"][open="true"] .course-name,
+.lightmode .course[semester="S4"][open="true"] .course-year-and-semester {
+    color: rgb(2, 47, 46);
+    transition: color 250ms ease-in;
+}
+
+.lightmode .course[semester="S5"] {
+    --hover-color: rgb(202, 53, 0, 0.4);
+}
+
+.lightmode .course[semester="S5"][open="true"] .course-name,
+.lightmode .course[semester="S5"][open="true"] .course-year-and-semester {
+    color: rgb(202, 53, 0);
+    transition: color 250ms ease-in;
+}
+
+.lightmode .course[semester="S6"] {
+    --hover-color: rgb(126, 42, 12, 0.4);
+}
+
+.lightmode .course[semester="S6"][open="true"] .course-name,
+.lightmode .course[semester="S6"][open="true"] .course-year-and-semester {
+    color: rgb(126, 42, 12);
+    transition: color 250ms ease-in;
+}
+
+.lightmode .course[semester="S7"] {
+    --hover-color: rgb(159, 7, 18, 0.4);
+}
+
+.lightmode .course[semester="S7"][open="true"] .course-name,
+.lightmode .course[semester="S7"][open="true"] .course-year-and-semester {
+    color: rgb(159, 7, 18);
+    transition: color 250ms ease-in;
+}
+
+.lightmode .course[semester="S8"] {
+    --hover-color: rgb(70, 8, 9, 0.4);
+}
+
+.lightmode .course[semester="S8"][open="true"] .course-name,
+.lightmode .course[semester="S8"][open="true"] .course-year-and-semester {
+    color: rgb(70, 8, 9);
+    transition: color 250ms ease-in;
+}
+
+/*@media(hover) {*/ /*It seems Micorsoft Edge has broken this query with their latest update, as of 15/02/2025. I opted to remove it, sorry mobile users*/
+    .lightmode .course[semester="S1"] .course-name:hover,
+    .lightmode .course[semester="S1"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(81, 162, 255);
+        transition: color 250ms ease-in;
+    }
+
+    .lightmode .course[semester="S2"] .course-name:hover,
+    .lightmode .course[semester="S2"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(28, 57, 142);
+        transition: color 250ms ease-in;
+    }
+
+    .lightmode .course[semester="S3"] .course-name:hover,
+    .lightmode .course[semester="S3"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(0, 95, 90);
+        transition: color 250ms ease-in;
+    }
+
+    .lightmode .course[semester="S4"] .course-name:hover,
+    .lightmode .course[semester="S4"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(2, 47, 46);
+        transition: color 250ms ease-in;
+    }
+
+    .lightmode .course[semester="S5"] .course-name:hover,
+    .lightmode .course[semester="S5"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(202, 53, 0);
+        transition: color 250ms ease-in;
+    }
+
+    .lightmode .course[semester="S6"] .course-name:hover,
+    .lightmode .course[semester="S6"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(126, 42, 12);
+        transition: color 250ms ease-in;
+    }
+
+    .lightmode .course[semester="S7"] .course-name:hover,
+    .lightmode .course[semester="S7"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(159, 7, 18);
+        transition: color 250ms ease-in;
+    }
+
+    .lightmode .course[semester="S8"] .course-name:hover,
+    .lightmode .course[semester="S8"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(70, 8, 9);
+        transition: color 250ms ease-in;
+    }
+/*}*/
+
+.course[semester="S1"] {
+    --hover-color: rgb(20, 71, 230, 0.4);
+}
+
+.course[semester="S1"][open="true"] .course-name,
+.course[semester="S1"][open="true"] .course-year-and-semester {
+    color: rgb(20, 71, 230);
+    transition: color 250ms ease-in;
+}
+
+.course[semester="S2"] {
+    --hover-color: rgb(21, 93, 252, 0.4);
+}
+
+.course[semester="S2"][open="true"] .course-name,
+.course[semester="S2"][open="true"] .course-year-and-semester {
+    color: rgb(21, 93, 252);
+    transition: color 250ms ease-in;
+}
+
+.course[semester="S3"] {
+    --hover-color: rgb(0, 187, 167, 0.4);
+}
+
+.course[semester="S3"][open="true"] .course-name,
+.course[semester="S3"][open="true"] .course-year-and-semester {
+    color: rgb(0, 187, 167);
+    transition: color 250ms ease-in;
+}
+
+.course[semester="S4"] {
+    --hover-color: rgb(0, 120, 111, 0.4);
+}
+
+.course[semester="S4"][open="true"] .course-name,
+.course[semester="S4"][open="true"] .course-year-and-semester {
+    color: rgb(0, 120, 111);
+    transition: color 250ms ease-in;
+}
+
+.course[semester="S5"] {
+    --hover-color: rgb(255, 137, 4, 0.4);
+}
+
+.course[semester="S5"][open="true"] .course-name,
+.course[semester="S5"][open="true"] .course-year-and-semester {
+    color: rgb(255, 137, 4);
+    transition: color 250ms ease-in;
+}
+
+.course[semester="S6"] {
+    --hover-color: rgb(245, 74, 0, 0.4);
+}
+
+.course[semester="S6"][open="true"] .course-name,
+.course[semester="S6"][open="true"] .course-year-and-semester {
+    color: rgb(245, 74, 0);
+    transition: color 250ms ease-in;
+}
+
+.course[semester="S7"] {
+    --hover-color: rgb(251, 44, 54, 0.4);
+}
+
+.course[semester="S7"][open="true"] .course-name,
+.course[semester="S7"][open="true"] .course-year-and-semester {
+    color: rgb(251, 44, 54);
+    transition: color 250ms ease-in;
+}
+
+.course[semester="S8"] {
+    --hover-color: rgb(193, 0, 7, 0.4);
+}
+
+.course[semester="S8"][open="true"] .course-name,
+.course[semester="S8"][open="true"] .course-year-and-semester {
+    color: rgb(193, 0, 7);
+    transition: color 250ms ease-in;
+}
+
+/*@media(hover) {*/ /*It seems Micorsoft Edge has broken this query with their latest update, as of 15/02/2025. I opted to remove it, sorry mobile users*/
+    .course[semester="S1"] .course-name:hover,
+    .course[semester="S1"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(20, 71, 230);
+        transition: color 250ms ease-in;
+    }
+
+    .course[semester="S2"] .course-name:hover,
+    .course[semester="S2"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(21, 93, 252);
+        transition: color 250ms ease-in;
+    }
+
+    .course[semester="S3"] .course-name:hover,
+    .course[semester="S3"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(0, 187, 167);
+        transition: color 250ms ease-in;
+    }
+
+    .course[semester="S4"] .course-name:hover,
+    .course[semester="S4"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(0, 120, 111);
+        transition: color 250ms ease-in;
+    }
+
+    .course[semester="S5"] .course-name:hover,
+    .course[semester="S5"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(255, 137, 4);
+        transition: color 250ms ease-in;
+    }
+
+    .course[semester="S6"] .course-name:hover,
+    .course[semester="S6"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(245, 74, 0);
+        transition: color 250ms ease-in;
+    }
+
+    .course[semester="S7"] .course-name:hover,
+    .course[semester="S7"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(251, 44, 54);
+        transition: color 250ms ease-in;
+    }
+
+    .course[semester="S8"] .course-name:hover,
+    .course[semester="S8"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(193, 0, 7);
+        transition: color 250ms ease-in;
+    }
+/*}*/
+
+/*
+
+.course[module="ELECT"],
+.course[module="ELEF1"],
+.course[module="ELEF2"] {
+    --hover-color: rgba(255, 223, 32, 0.4);
+}
+
+.course[module="ELECT"][open="true"] .course-name,
+.course[module="ELECT"][open="true"] .course-year-and-semester,
+.course[module="ELEF1"][open="true"] .course-name,
+.course[module="ELEF1"][open="true"] .course-year-and-semester,
+.course[module="ELEF2"][open="true"] .course-name,
+.course[module="ELEF2"][open="true"] .course-year-and-semester {
+    color: rgb(255, 223, 32);
+    transition: color 250ms ease-in;
+}
+
+.course[module="TEE"],
+.course[module="TEO"],
+.course[module="ANG1"] {
+    --hover-color: rgba(81, 162, 255, 0.4);
+}
+
+.course[module="TEE"][open="true"] .course-name,
+.course[module="TEE"][open="true"] .course-year-and-semester,
+.course[module="TEO"][open="true"] .course-name,
+.course[module="TEO"][open="true"] .course-year-and-semester,
+.course[module="ANG1"][open="true"] .course-name,
+.course[module="ANG1"][open="true"] .course-year-and-semester {
+    color: rgb(81, 162, 255);
+    transition: color 250ms ease-in;
+}
+
+.course[module="ALSDS"],
+.course[module="ALSDD"],
+.course[module="SFSD"] {
+    --hover-color: rgba(0, 122, 85, 0.4);
+}
+
+.course[module="ALSDS"][open="true"] .course-name,
+.course[module="ALSDS"][open="true"] .course-year-and-semester,
+.course[module="ALSDD"][open="true"] .course-name,
+.course[module="ALSDD"][open="true"] .course-year-and-semester,
+.course[module="SFSD"][open="true"] .course-name,
+.course[module="SFSD"][open="true"] .course-year-and-semester {
+    color: rgb(0, 122, 85);
+    transition: color 250ms ease-in;
+}
+
+.course[module="ANAL1"],
+.course[module="ANAL2"],
+.course[module="ANAL3"],
+.course[module="ANAL4"] {
+    --hover-color: rgba(251, 44, 54, 0.4);
+}
+
+.course[module="ANAL1"][open="true"] .course-name,
+.course[module="ANAL1"][open="true"] .course-year-and-semester,
+.course[module="ANAL2"][open="true"] .course-name,
+.course[module="ANAL2"][open="true"] .course-year-and-semester,
+.course[module="ANAL3"][open="true"] .course-name,
+.course[module="ANAL3"][open="true"] .course-year-and-semester,
+.course[module="ANAL4"][open="true"] .course-name,
+.course[module="ANAL4"][open="true"] .course-year-and-semester {
+    color: rgb(251, 44, 54);
+    transition: color 250ms ease-in;
+}
+
+@media(hover) {
+    .course[module="ELECT"] .course-name:hover,
+    .course[module="ELECT"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="ELEF1"] .course-name:hover,
+    .course[module="ELEF1"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="ELEF2"] .course-name:hover,
+    .course[module="ELEF2"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(255, 223, 32);
+        transition: color 250ms ease-in;
+    }
+
+    .course[module="TEE"] .course-name:hover,
+    .course[module="TEE"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="TEO"] .course-name:hover,
+    .course[module="TEO"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="ANG1"] .course-name:hover,
+    .course[module="ANG1"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(81, 162, 255);
+        transition: color 250ms ease-in;
+    }
+
+    .course[module="ALSDS"] .course-name:hover,
+    .course[module="ALSDS"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="ALSDD"] .course-name:hover,
+    .course[module="ALSDD"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="SFSD"] .course-name:hover,
+    .course[module="SFSD"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(0, 122, 85);
+        transition: color 250ms ease-in;
+    }
+
+    .course[module="ANAL1"] .course-name:hover,
+    .course[module="ANAL1"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="ANAL2"] .course-name:hover,
+    .course[module="ANAL2"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="ANAL3"] .course-name:hover,
+    .course[module="ANAL3"]:has(.course-name:hover) .course-year-and-semester,
+    .course[module="ANAL4"] .course-name:hover,
+    .course[module="ANAL4"]:has(.course-name:hover) .course-year-and-semester {
+        color: rgb(251, 44, 54);
+        transition: color 250ms ease-in;
+    }
+}
+
+*/

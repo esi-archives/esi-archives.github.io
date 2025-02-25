@@ -1,0 +1,329 @@
+* {
+  interpolate-size: allow-keywords;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.cards:has(.card:hover):hover>.card::after {
+  opacity: 1;
+}
+
+.card {
+  all: unset;
+  position: relative;
+  background-color: var(--card-border);
+  border-radius: 10px;
+  height: calc(2*(20px + var(--fs-900)*2 + 15px + 1rem + 0.75ch*3 + (var(--fs-200) + 1px)*4 + 7px) + 15px);
+  /*height: 260px;*/
+  width: 210px;
+  /*175px;*/
+  interpolate-size: allow-keywords;
+  transition: width 500ms ease-out, margin 500ms ease-out 500ms;
+}
+
+.card[year="3CS"] {
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.lightmode .card[year="3CS"]{
+  opacity: 0.25;
+}
+
+.card[year="3CS"]:hover,
+.card[year="3CS"]:hover::before,
+.card[year="3CS"]:hover::after {
+  transition: none;
+}
+
+.card[open="true"]::before {
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+      var(--card-before),
+      transparent 40%);
+  z-index: 2;
+}
+
+.card::after {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+      var(--clr-accent-04),
+      transparent 40%);
+  z-index: 1;
+}
+
+.card:not(:hover) * {
+  pointer-events: none;
+}
+
+.card>.card-content {
+  background: var(--card-color);
+  border-radius: inherit;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  inset: 1px;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.75;
+}
+
+.lightmode .card>.card-content {
+  opacity: 0.85;
+}
+
+.lightmode .card:hover>.card-content {
+  opacity: 0.75;
+}
+
+.card[year="3CS"]>.card-content {
+  opacity: 1;
+}
+
+.card-content>* {
+  opacity: 1;
+}
+
+.card .s {
+  position: relative;
+  display: grid;
+  grid-template-rows: calc(var(--fs-900)*2) auto;
+  margin: 20px;
+  margin-bottom: 0px;
+  white-space: nowrap;
+  interpolate-size: allow-keywords;
+  transition: width 500ms ease-in;
+}
+
+.card .s .title {
+  font-size: calc(var(--fs-900) + 15px);
+  font-weight: 900;
+  font-family: var(--ff-title);
+  color: var(--clr-text);
+  height: max-content;
+  overflow: hidden;
+
+  transition: width 500ms ease-out, color 250ms ease-out;
+}
+
+.card .s:first-of-type .title {
+  width: 3.225ch;
+}
+
+.card[year="3CS"] .s:first-of-type .title {
+  width: 3.5ch;
+}
+
+.card[open="true"]>.card-content {
+  background: linear-gradient(to bottom, var(--card-color) 0% calc(50% - 0.5px), transparent calc(50% - 0.5px) calc(50% + 0.5px), var(--card-color) calc(50% + 0.5px) 100%);
+}
+
+.card[open="true"] .s .title {
+  width: max-content;
+  transition: width 150ms ease-in, color 250ms ease-in 150ms;
+}
+
+
+.card .s:nth-of-type(2),
+.card .s:nth-of-type(2) .title {
+  width: 0px;
+  pointer-events: none;
+  interpolate-size: allow-keywords;
+  transition: all 500ms ease-out;
+}
+
+.card[open="true"] .s:nth-of-type(2),
+.card[open="true"] .s:nth-of-type(2) .title {
+  width: auto;
+  pointer-events: auto;
+  transition: width 150ms linear, color 250ms ease-in 150ms;
+}
+
+
+.card .s .title:hover {
+  cursor: pointer;
+  color: var(--clr-accent);
+  transition: color 250ms ease-in 150ms;
+}
+
+.card .info-wrapper {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  align-self: end;
+  interpolate-size: allow-keywords;
+  margin-bottom: 1rem;
+  transition: width 500ms ease-out;
+}
+
+.card .info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-end;
+  row-gap: 0.75ch;
+  column-gap: 0.5ch;
+  width: calc(200px - 20px * 2);
+  /*width: calc-size(min-content, size*3 + 1ch);*/
+}
+
+.card[open="true"] .info-wrapper {
+  opacity: 1;
+  width: auto;
+  transition: width 150ms ease-in, opacity 250ms ease-in 250ms, height 0ms ease-in 150ms;
+}
+
+.card .info a {
+  margin: 0;
+  font-family: var(--ff-other);
+  font-size: calc(var(--fs-200) + 1px);
+  font-weight: 700;
+  color: var(--card-border);
+  transition: color 250ms ease-out;
+}
+
+.card .info a:hover {
+  color: var(--clr-accent-04);
+  transition: color 150ms ease-in;
+}
+
+/*@media(hover) {*/ /*It seems Micorsoft Edge has broken this query with their latest update, as of 15/02/2025. I opted to remove it, sorry mobile users*/
+  .cards:has(.card:hover):hover>.card::after {
+    opacity: 1;
+  }
+
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  .card:hover>.card-content {
+    background: linear-gradient(to bottom, var(--card-color) 0% calc(50% - 0.5px), transparent calc(50% - 0.5px) calc(50% + 0.5px), var(--card-color) calc(50% + 0.5px) 100%);
+  }
+
+  .card:hover .s .title {
+    width: max-content;
+    transition: width 150ms ease-in, color 250ms ease-in 150ms;
+  }
+
+  .card:hover .s:nth-of-type(2),
+  .card:hover .s:nth-of-type(2) .title {
+    width: auto;
+    pointer-events: auto;
+    transition: width 150ms linear, color 250ms ease-in 150ms;
+  }
+
+  .card:hover .info-wrapper {
+    opacity: 1;
+    width: auto;
+    transition: width 150ms ease-in, opacity 250ms ease-in 250ms, height 0ms ease-in 150ms;
+  }
+/*}*/
+
+/* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
+
+/*@media screen and (min-width: 500px) and (orientation: portrait) {
+  .cards {
+    margin-inline: 0px;
+  }
+
+  .card {
+    margin: 0 calc((100vw - 200px)/2);
+  }
+
+  .card:hover,
+  .card[open="true"] {
+    margin: 0 auto;
+  }
+}*/
+
+@media(max-width: 1000px) {
+
+  .cards {
+    max-width: 1000px;
+    padding: 10px 0px;
+  }
+
+  /*
+  .card {
+    flex-shrink: 1;
+    width: calc(50% - 4px);
+  }*/
+}
+
+@media screen and (orientation: portrait) {
+  .card[open="true"]>.card-content {
+    background: linear-gradient(to bottom, var(--card-color) 0% calc(50% - 0.5px), transparent calc(50% - 0.5px) calc(50% + 0.5px), var(--card-color) calc(50% + 0.5px) 100%);
+  }
+
+  .card[open="true"] .s .title {
+    width: max-content !important;
+    transition: width 150ms ease-in forwards;
+  }
+
+  .card[open="true"] .s:nth-of-type(2),
+  .card[open="true"] .s:nth-of-type(2) .title {
+    width: auto;
+    pointer-events: auto;
+    transition: width 150ms linear, color 250ms ease-in 150ms;
+  }
+
+  .card[open="true"] .info-wrapper {
+    opacity: 1;
+    width: auto;
+    transition: width 150ms ease-in, opacity 250ms ease-in 250ms, height 0ms ease-in 150ms;
+  }
+
+  .card[open="true"] span {
+    width: 1px;
+    background-color: var(--clr-accent-04);
+    transition: width 150ms ease-in 150ms, color 150ms ease-in;
+  }
+}
+
+#TPs .card {
+  height: calc(20px + var(--fs-900)*2 + 15px + 1rem + 1.5ch + 0.75ch*3 + (var(--fs-200) + 1px)*4 + 7px);
+}
+
+#TPs .card-content {
+  grid-template-rows: 1fr;
+}
+
+
+#TPs .card[open="true"]>.card-content {
+  background: var(--card-color);
+}
+
+#TPS .info .break-flex {
+  flex-basis: 100%;
+}
+
+/*@media(hover) {*/ /*It seems Micorsoft Edge has broken this query with their latest update, as of 15/02/2025. I opted to remove it, sorry mobile users*/
+  #TPs .card:hover>.card-content {
+    background: var(--card-color);
+  }
+/*}*/
+
+.info + .info {
+  margin-top: 1.5ch;
+}
